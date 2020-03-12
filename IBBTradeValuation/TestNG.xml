@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Autoinspekt-Testcases">
 
-	<test name="All Cases">
+	<test name="All tests">
 	 
 	<classes>
 			<class name="mainTestcases.links2" >
