@@ -25,77 +25,80 @@ import io.appium.java_client.android.AndroidDriver;
 public class BasicDetails {
 
 	protected static AppiumHelper helper = new AppiumHelper();
-	
-	
-	
-	
-	public void inspectionType(AndroidDriver<MobileElement> driver,String InspectioType) throws Exception {
+
+	public void inspectionType(AndroidDriver<MobileElement> driver, String InspectioType) throws Exception {
 		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Inspection Type*']");
-		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+InspectioType+"']");
-		
-				
+		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + InspectioType + "']");
+
 	}
-	
-	public void NewCarDealership(AndroidDriver<MobileElement> driver,String Newcardelaership,String Selectnewcardealership,String Newcardealershiifothers,String Newcarexecutive) throws Exception {
-		
-		
+
+	public void NewCarDealership(AndroidDriver<MobileElement> driver, String Newcardelaership,
+			String Selectnewcardealership, String Newcardealershiifothers, String Newcarexecutive) throws Exception {
+
 		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='New Car Dealership*']");
-		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Newcardelaership+"']");
-		if(Newcardelaership.equalsIgnoreCase("Yes")) {
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Select New Car Dealership']//following-sibling::android.widget.TextView");
-			
-		try {
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='NO NCD Details']").isDisplayed()) {
+		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Newcardelaership + "']");
+		if (Newcardelaership.equalsIgnoreCase("Yes")) {
+			helper.clickOnElementByXpath(driver,
+					"//android.widget.TextView[@text='Select New Car Dealership']//following-sibling::android.widget.TextView");
+
+			try {
+				if (AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='NO NCD Details']")
+						.isDisplayed()) {
 					System.out.println("No NCD Details are avialble to select");
 					driver.navigate().back();
 					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='New Car Dealership(if others)']//following-sibling::android.widget.EditText");
-					AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='New Car Dealership(if others)']//following-sibling::android.widget.EditText").sendKeys(Newcardealershiifothers);
-					AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='New Car Executive']//following-sibling::android.widget.EditText").sendKeys(Newcarexecutive);
-					
-					
-					//helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='New Car Dealership(if others)']//following-sibling::android.widget.EditText", Newcardealershiifothers);
-				//	helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='New Car Executive']//following-sibling::android.widget.EditText", Newcarexecutive);
+					helper.clickOnElementByXpath(driver,
+							"//android.widget.TextView[@text='New Car Dealership(if others)']//following-sibling::android.widget.EditText");
+					AppiumHelper.FindElementByXpath(driver,
+							"//android.widget.TextView[@text='New Car Dealership(if others)']//following-sibling::android.widget.EditText")
+							.sendKeys(Newcardealershiifothers);
+					AppiumHelper.FindElementByXpath(driver,
+							"//android.widget.TextView[@text='New Car Executive']//following-sibling::android.widget.EditText")
+							.sendKeys(Newcarexecutive);
+
+					// helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='New Car
+					// Dealership(if others)']//following-sibling::android.widget.EditText",
+					// Newcardealershiifothers);
+					// helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='New Car
+					// Executive']//following-sibling::android.widget.EditText", Newcarexecutive);
+				} else {
+					helper.clickOnElementByXpath(driver,
+							"//android.widget.TextView[@text='" + Selectnewcardealership + "']");
 				}
-				else {
-					helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Selectnewcardealership+"']");
-				}
-			
+
+			} catch (NoSuchElementException e) {
+
+				java.util.List<MobileElement> listofNCDDealers = driver
+						.findElementById("com.mahindra.ibbtrade_pro:id/list_view")
+						.findElementsByClassName("android.widget.LinearLayout");
+
+				System.out.println(listofNCDDealers.size());
+
+				System.out.println("Selected NCD dealer : " + listofNCDDealers.get(0)
+						.findElementById("com.mahindra.ibbtrade_pro:id/list_item_text").getText());
+
+				listofNCDDealers.get(0).findElementById("com.mahindra.ibbtrade_pro:id/list_item_text").click();
+
+			}
+
+		} else {
+
 		}
-		catch(NoSuchElementException e) {
-			
-			
-			java.util.List<MobileElement> listofNCDDealers=driver.findElementById("com.mahindra.ibbtrade_pro:id/list_view").findElementsByClassName("android.widget.LinearLayout");
-			
-			System.out.println(listofNCDDealers.size());
-			
-			System.out.println("Selected NCD dealer : "+listofNCDDealers.get(0).findElementById("com.mahindra.ibbtrade_pro:id/list_item_text").getText());
-			
-			
-			listofNCDDealers.get(0).findElementById("com.mahindra.ibbtrade_pro:id/list_item_text").click();
-			
-		}
-			
-		}
-		else {
-			
-		}
-		
+
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Select
 		// New Car Dealership']");
 		// helper.clickOnElementByXpath(driver, "//android:id/text1[@text='NO NCD
 		// Details']");
-		// 
+		//
 		// helper.clickOnElementByXpath(driver, "//android:id/text1[@text='Field']");
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='New
 		// Car Executive']");
 		// helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='New Car
 		// Executive']", "");
-		
-		
+
 	}
 
-	public void CustomerName(AndroidDriver<MobileElement> driver,String CustomerName) throws Exception {
+	public void CustomerName(AndroidDriver<MobileElement> driver, String CustomerName) throws Exception {
 		// Customer name
 		try {
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Customer Name*']");
@@ -103,9 +106,14 @@ public class BasicDetails {
 					"//android.widget.TextView[@text='Customer Name*']//following-sibling::android.widget.EditText")
 					.getText().isEmpty()) {
 				System.out.println("Customer name field is not prefilled");
-				helper.SendkeysByXpath(driver,
-						"//android.widget.TextView[@text='Customer Name*']//following-sibling::android.widget.EditText",
-						CustomerName);
+				AppiumHelper.FindElementByXpath(driver,
+						"//android.widget.TextView[@text='Customer Name*']//following-sibling::android.widget.EditText")
+						.sendKeys(CustomerName);
+				/*
+				 * helper.SendkeysByXpath(driver,
+				 * "//android.widget.TextView[@text='Customer Name*']//following-sibling::android.widget.EditText"
+				 * , CustomerName);
+				 */
 			} else {
 				System.out.println("Customer name field is prefilled");
 			}
@@ -116,9 +124,9 @@ public class BasicDetails {
 					"//android.widget.TextView[@text='Customer Name*']//following-sibling::android.widget.EditText")
 					.getText().isEmpty()) {
 				System.out.println("Customer name field is not prefilled");
-				helper.SendkeysByXpath(driver,
-						"//android.widget.TextView[@text='Customer Name*']//following-sibling::android.widget.EditText",
-						CustomerName);
+				AppiumHelper.FindElementByXpath(driver,
+						"//android.widget.TextView[@text='Customer Name*']//following-sibling::android.widget.EditText")
+						.sendKeys(CustomerName);
 
 			} else {
 				System.out.println("Customer name field is prefilled");
@@ -128,7 +136,7 @@ public class BasicDetails {
 
 	}
 
-	public void Mobilenumber(AndroidDriver<MobileElement> driver,String Mobilenumber) throws Exception {
+	public void Mobilenumber(AndroidDriver<MobileElement> driver, String Mobilenumber) throws Exception {
 		// Mobilenumber
 		try {
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Customer Mobile No*']");
@@ -136,7 +144,10 @@ public class BasicDetails {
 					"//android.widget.TextView[@text='Customer Mobile No*']//following-sibling::android.widget.EditText")
 					.getText().isEmpty()) {
 				System.out.println("MobileNumber field is not prefilled");
-				helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='Customer Mobile No*']", Mobilenumber);
+				AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='Customer Mobile No*']//following-sibling::android.widget.EditText")
+						.sendKeys(Mobilenumber);
+				// helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='Customer
+				// Mobile No*']", Mobilenumber);
 			} else {
 				System.out.println("MobileNumber field is prefilled");
 			}
@@ -147,14 +158,15 @@ public class BasicDetails {
 					"//android.widget.TextView[@text='Customer Mobile No*']//following-sibling::android.widget.EditText")
 					.getText().isEmpty()) {
 				System.out.println("MobileNumber field is not prefilled");
-				helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='Customer Mobile No*']", Mobilenumber);
+				AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='Customer Mobile No*']//following-sibling::android.widget.EditText")
+						.sendKeys(Mobilenumber);
 			} else {
 				System.out.println("MobileNumber field is prefilled");
 			}
 		}
 	}
 
-	public void Address(AndroidDriver<MobileElement> driver,String Customeraddress) throws Exception {
+	public void Address(AndroidDriver<MobileElement> driver, String Customeraddress) throws Exception {
 		// Customer Address
 		try {
 			helper.clickOnElementByXpath(driver,
@@ -176,13 +188,15 @@ public class BasicDetails {
 		}
 	}
 
-	public void CustomerEmail(AndroidDriver<MobileElement> driver,String customeremailid) throws Exception {
+	public void CustomerEmail(AndroidDriver<MobileElement> driver, String customeremailid) throws Exception {
 		// customer email id
 		try {
 
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Customer Email Id']//following-sibling::android.widget.EditText");
-			AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='Customer Email Id']//following-sibling::android.widget.EditText").clear();
+			AppiumHelper.FindElementByXpath(driver,
+					"//android.widget.TextView[@text='Customer Email Id']//following-sibling::android.widget.EditText")
+					.clear();
 			AppiumHelper.FindElementByXpath(driver,
 					"//android.widget.TextView[@text='Customer Email Id']//following-sibling::android.widget.EditText")
 					.sendKeys(customeremailid);
@@ -190,7 +204,9 @@ public class BasicDetails {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Customer Email Id']//following-sibling::android.widget.EditText");
-			AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='Customer Email Id']//following-sibling::android.widget.EditText").clear();
+			AppiumHelper.FindElementByXpath(driver,
+					"//android.widget.TextView[@text='Customer Email Id']//following-sibling::android.widget.EditText")
+					.clear();
 			AppiumHelper.FindElementByXpath(driver,
 					"//android.widget.TextView[@text='Customer Email Id']//following-sibling::android.widget.EditText")
 					.sendKeys(customeremailid);
@@ -224,7 +240,7 @@ public class BasicDetails {
 		}
 	}
 
-	public void Manufactureyear(AndroidDriver<MobileElement> driver,String Manufacturingyear) throws Exception {
+	public void Manufactureyear(AndroidDriver<MobileElement> driver, String Manufacturingyear) throws Exception {
 		// Manufactureyear
 		try {
 
@@ -234,17 +250,17 @@ public class BasicDetails {
 				System.out.println("Manufacture year field is not prefilled");
 				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Manufacturing Year*']");
 				helper.ScrollToViewElement(driver, Manufacturingyear);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Manufacturingyear+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Manufacturingyear + "']");
 			} else {
 				System.out.println("Manufacture year field is prefilled");
 				AppiumHelper.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Manufacturing Year*']//following-sibling::android.widget.TextView").click();
-				//helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Manufacturing Year*']");
+						"//android.widget.TextView[@text='Manufacturing Year*']//following-sibling::android.widget.TextView")
+						.click();
+				// helper.clickOnElementByXpath(driver,
+				// "//android.widget.TextView[@text='Manufacturing Year*']");
 				helper.ScrollToViewElement(driver, Manufacturingyear);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Manufacturingyear+"']");
-				
-				
-				
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Manufacturingyear + "']");
+
 			}
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
@@ -255,247 +271,258 @@ public class BasicDetails {
 				System.out.println("Manufacture year field is not prefilled");
 				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Manufacturing Year*']");
 				helper.ScrollToViewElement(driver, Manufacturingyear);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Manufacturingyear+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Manufacturingyear + "']");
 			} else {
 				System.out.println("Manufacture year field is prefilled");
 			}
 		}
 	}
 
-	public void Make(AndroidDriver<MobileElement> driver,String Make) throws Exception {
+	public void Make(AndroidDriver<MobileElement> driver, String Make) throws Exception {
 		// Make
 		try {
 			if (AppiumHelper
 					.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView")
-					.getText().isEmpty() | AppiumHelper
-					.FindElementByXpath(driver,
+					.getText().isEmpty()
+					| AppiumHelper.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView")
-					.getText().equals("select Make")) {
+							.getText().equals("select Make")) {
 				System.out.println("Make field is not prefilled / field value is resetted");
 				AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView").click();
-				
+						.FindElementByXpath(driver,
+								"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView")
+						.click();
+
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Make);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Make+"']").isDisplayed()){
+				if (AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='" + Make + "']")
+						.isDisplayed()) {
 					System.out.println("Searched value is displayed");
-				}
-				else {
+				} else {
 					System.out.println("Searched value is not displayed");
 				}
-				
+
 				helper.ScrollToViewElement(driver, Make);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Make+"']");
-						
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Make + "']");
 
 			} else {
 				System.out.println("Make field is prefilled");
-				
-				/*AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView").click();
-				
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Make);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Make+"']").isDisplayed()){
-					System.out.println("Searched value is displayed");
-				}
-				else {
-					System.out.println("Searched value is not displayed");
-				}
-				
-				helper.ScrollToViewElement(driver, Make);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Make+"']");*/	
-				
-				
+
+				/*
+				 * AppiumHelper .FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView"
+				 * ).click();
+				 * 
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").click();
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Make);
+				 * if(AppiumHelper.FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Make+"']").isDisplayed()){
+				 * System.out.println("Searched value is displayed"); } else {
+				 * System.out.println("Searched value is not displayed"); }
+				 * 
+				 * helper.ScrollToViewElement(driver, Make);
+				 * helper.clickOnElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Make+"']");
+				 */
+
 			}
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			if (AppiumHelper
 					.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView")
-					.getText().isEmpty() | AppiumHelper
-					.FindElementByXpath(driver,
+					.getText().isEmpty()
+					| AppiumHelper.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView")
-					.getText().equals("select Make")) {
+							.getText().equals("select Make")) {
 				System.out.println("Make field is not prefilled / field value is resetted\"");
 				AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView").click();
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Make+"']").isDisplayed()){
+						.FindElementByXpath(driver,
+								"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView")
+						.click();
+				if (AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='" + Make + "']")
+						.isDisplayed()) {
 					System.out.println("Searched value is displayed");
-				}
-				else {
+				} else {
 					System.out.println("Searched value is not displayed");
 				}
 				helper.ScrollToViewElement(driver, Make);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Make+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Make + "']");
 
 			} else {
 				System.out.println("Make field is prefilled");
-				
-				/*AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView").click();
-				
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Make);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Make+"']").isDisplayed()){
-					System.out.println("Searched value is displayed");
-				}
-				else {
-					System.out.println("Searched value is not displayed ");
-				}
-				
-				helper.ScrollToViewElement(driver, Make);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Make+"']");*/	
-				
-				
+
+				/*
+				 * AppiumHelper .FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='Make*']//following-sibling::android.widget.TextView"
+				 * ).click();
+				 * 
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").click();
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Make);
+				 * if(AppiumHelper.FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Make+"']").isDisplayed()){
+				 * System.out.println("Searched value is displayed"); } else {
+				 * System.out.println("Searched value is not displayed "); }
+				 * 
+				 * helper.ScrollToViewElement(driver, Make);
+				 * helper.clickOnElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Make+"']");
+				 */
+
 			}
 		}
 	}
 
-	public void Model(AndroidDriver<MobileElement> driver,String Model) throws Exception {
+	public void Model(AndroidDriver<MobileElement> driver, String Model) throws Exception {
 
 		// Model
 		try {
 			if (AppiumHelper
 					.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView")
-					.getText().isEmpty()|AppiumHelper
-					.FindElementByXpath(driver,
+					.getText().isEmpty()
+					| AppiumHelper.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView")
-					.getText().equals("select Model")) {
+							.getText().equals("select Model")) {
 				System.out.println("Model field is not prefilled / field value is resetted\"");
 				AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView").click();
-				
+						.FindElementByXpath(driver,
+								"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView")
+						.click();
+
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Model);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Model+"']").isDisplayed()){
+				if (AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='" + Model + "']")
+						.isDisplayed()) {
 					System.out.println("Searched value is displayed");
-				}
-				else {
+				} else {
 					System.out.println("Searched value is not displayed");
 				}
 				helper.ScrollToViewElement(driver, Model);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Model+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Model + "']");
 
 			} else {
 				System.out.println("Model field is prefilled");
-				
-				/*AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView").click();
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Model);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Model+"']").isDisplayed()){
-					System.out.println("Searched value is displayed");
-				}
-				else {
-					System.out.println("Searched value is not displayed");
-				}
-				helper.ScrollToViewElement(driver, Model);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Model+"']");*/
+
+				/*
+				 * AppiumHelper .FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView"
+				 * ).click(); AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").click();
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Model);
+				 * if(AppiumHelper.FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Model+"']").isDisplayed()){
+				 * System.out.println("Searched value is displayed"); } else {
+				 * System.out.println("Searched value is not displayed"); }
+				 * helper.ScrollToViewElement(driver, Model);
+				 * helper.clickOnElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Model+"']");
+				 */
 			}
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			if (AppiumHelper
 					.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView")
-					.getText().isEmpty()|AppiumHelper
-					.FindElementByXpath(driver,
+					.getText().isEmpty()
+					| AppiumHelper.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView")
-					.getText().equals("select Model")) {
+							.getText().equals("select Model")) {
 				System.out.println("Model field is not prefilled / field value is resetted\"");
 				AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView").click();
-				
+						.FindElementByXpath(driver,
+								"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView")
+						.click();
+
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Model);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Model+"']").isDisplayed()){
+				if (AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='" + Model + "']")
+						.isDisplayed()) {
 					System.out.println("Searched value is displayed");
-				}
-				else {
+				} else {
 					System.out.println("Searched value is not displayed");
 				}
 				helper.ScrollToViewElement(driver, Model);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Model+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Model + "']");
 
 			} else {
 				System.out.println("Model field is prefilled");
-				
-				/*AppiumHelper.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView").click();
-				
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Model);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Model+"']").isDisplayed()){
-					System.out.println("Searched value is displayed");
-				}
-				else {
-					System.out.println("Searched value is not displayed");
-				}
-				helper.ScrollToViewElement(driver, Model);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Model+"']");
-				*/
-				
-				
+
+				/*
+				 * AppiumHelper.FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='Model*']//following-sibling::android.widget.TextView"
+				 * ).click();
+				 * 
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").click();
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Model);
+				 * if(AppiumHelper.FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Model+"']").isDisplayed()){
+				 * System.out.println("Searched value is displayed"); } else {
+				 * System.out.println("Searched value is not displayed"); }
+				 * helper.ScrollToViewElement(driver, Model);
+				 * helper.clickOnElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Model+"']");
+				 */
+
 			}
 		}
 	}
 
-	public void Variant(AndroidDriver<MobileElement> driver,String Variant) throws Exception {
+	public void Variant(AndroidDriver<MobileElement> driver, String Variant) throws Exception {
 		// Variant
 
 		try {
 			if (AppiumHelper
 					.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView")
-					.getText().isEmpty()|AppiumHelper
-					.FindElementByXpath(driver,
+					.getText().isEmpty()
+					| AppiumHelper.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView")
-					.getText().equals("select Varient")) {
+							.getText().equals("select Varient")) {
 				System.out.println("Variant field is not prefilled / field value is resetted\"");
-				AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView").click();
-				
+				AppiumHelper.FindElementByXpath(driver,
+						"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView")
+						.click();
+
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Variant);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Variant+"']").isDisplayed()){
+				if (AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='" + Variant + "']")
+						.isDisplayed()) {
 					System.out.println("Searched value is displayed");
-				}
-				else {
+				} else {
 					System.out.println("Searched value is not displayed");
 				}
 				helper.ScrollToViewElement(driver, Variant);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Variant+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Variant + "']");
 
 			} else {
 				System.out.println("Variant field is prefilled");
-				/*AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView").click();
-				
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Variant);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Variant+"']").isDisplayed()){
-					System.out.println("Searched value is displayed");
-				}
-				else {
-					System.out.println("Searched value is not displayed");
-				}
-				helper.ScrollToViewElement(driver, Variant);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Variant+"']");
-				*/
-				
-				
-				
+				/*
+				 * AppiumHelper .FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView"
+				 * ).click();
+				 * 
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").click();
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Variant);
+				 * if(AppiumHelper.FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Variant+"']").isDisplayed()){
+				 * System.out.println("Searched value is displayed"); } else {
+				 * System.out.println("Searched value is not displayed"); }
+				 * helper.ScrollToViewElement(driver, Variant);
+				 * helper.clickOnElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Variant+"']");
+				 */
+
 			}
 
 		} catch (NoSuchElementException e) {
@@ -503,64 +530,65 @@ public class BasicDetails {
 			if (AppiumHelper
 					.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView")
-					.getText().isEmpty()|AppiumHelper
-					.FindElementByXpath(driver,
+					.getText().isEmpty()
+					| AppiumHelper.FindElementByXpath(driver,
 							"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView")
-					.getText().equals("select Varient")) {
+							.getText().equals("select Varient")) {
 				System.out.println("Variant field is not prefilled / field value is resetted");
-				AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView").click();
+				AppiumHelper.FindElementByXpath(driver,
+						"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView")
+						.click();
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
 				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Variant);
-				
-				
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Variant+"']").isDisplayed()){
+
+				if (AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='" + Variant + "']")
+						.isDisplayed()) {
 					System.out.println("Searched value is displayed");
-				}
-				else {
+				} else {
 					System.out.println("Searched value is not displayed");
 				}
 				helper.ScrollToViewElement(driver, Variant);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Variant+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Variant + "']");
 
 			} else {
 				System.out.println("Variant field is prefilled");
-				/*AppiumHelper
-				.FindElementByXpath(driver,
-						"//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView").click();
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").click();
-				AppiumHelper.FindElementById(driver, "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Variant);
-				if(AppiumHelper.FindElementByXpath(driver, "//android.widget.TextView[@text='"+Variant+"']").isDisplayed()){
-					System.out.println("Searched value is displayed");
-				}
-				else {
-					System.out.println("Searched value is not displayed");
-				}
-				helper.ScrollToViewElement(driver, Variant);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Variant+"']");*/
+				/*
+				 * AppiumHelper .FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='Variant*']//following-sibling::android.widget.TextView"
+				 * ).click(); AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").click();
+				 * AppiumHelper.FindElementById(driver,
+				 * "com.mahindra.ibbtrade_pro:id/searchBar").sendKeys(Variant);
+				 * if(AppiumHelper.FindElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Variant+"']").isDisplayed()){
+				 * System.out.println("Searched value is displayed"); } else {
+				 * System.out.println("Searched value is not displayed"); }
+				 * helper.ScrollToViewElement(driver, Variant);
+				 * helper.clickOnElementByXpath(driver,
+				 * "//android.widget.TextView[@text='"+Variant+"']");
+				 */
 			}
 		}
 	}
 
-	public void Registered(AndroidDriver<MobileElement> driver,String Registered) throws Exception {
+	public void Registered(AndroidDriver<MobileElement> driver, String Registered) throws Exception {
 		// Registered
 
 		try {
 
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Registered*']");
 			helper.ScrollToViewElement(driver, Registered);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Registered+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Registered + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Registered*']");
 			helper.ScrollToViewElement(driver, Registered);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Registered+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Registered + "']");
 		}
 	}
 
-	public void Registeredyear(AndroidDriver<MobileElement> driver,String Registeredyear) throws Exception {
+	public void Registeredyear(AndroidDriver<MobileElement> driver, String Registeredyear) throws Exception {
 		// Registeredyear
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Registered year*']");
@@ -569,13 +597,13 @@ public class BasicDetails {
 
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Registered year*']");
 			helper.ScrollToViewElement(driver, Registeredyear);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Registeredyear+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Registeredyear + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Registered year*']");
 			helper.ScrollToViewElement(driver, Registeredyear);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Registeredyear+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Registeredyear + "']");
 		}
 
 	}
@@ -620,7 +648,7 @@ public class BasicDetails {
 
 	}
 
-	public void Ownership(AndroidDriver<MobileElement> driver,String Ownershipnumber) throws Exception {
+	public void Ownership(AndroidDriver<MobileElement> driver, String Ownershipnumber) throws Exception {
 		// Ownership
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Ownership Number*']");
@@ -657,7 +685,7 @@ public class BasicDetails {
 		}
 	}
 
-	public void Regstate(AndroidDriver<MobileElement> driver,String registrationstate) throws Exception {
+	public void Regstate(AndroidDriver<MobileElement> driver, String registrationstate) throws Exception {
 		// Regstate
 
 		// helper.clickOnElementByXpath(driver,
@@ -668,18 +696,18 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Registration State(if not registered enter valuation state and city)*']//following-sibling::android.widget.TextView");
 			helper.ScrollToViewElement(driver, registrationstate);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+registrationstate+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + registrationstate + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Registration State(if not registered enter valuation state and city)*']//following-sibling::android.widget.TextView");
 			helper.ScrollToViewElement(driver, registrationstate);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+registrationstate+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + registrationstate + "']");
 		}
 	}
 
-	public void Regcity(AndroidDriver<MobileElement> driver,String Regcity) throws Exception {
+	public void Regcity(AndroidDriver<MobileElement> driver, String Regcity) throws Exception {
 		// Regcity
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Registration City*']");
@@ -688,7 +716,7 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Registration City*']//following-sibling::android.widget.TextView");
 			helper.ScrollToViewElement(driver, Regcity);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Regcity+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Regcity + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
@@ -696,13 +724,13 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Registration City*']//following-sibling::android.widget.TextView");
 			helper.ScrollToViewElement(driver, Regcity);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Regcity+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Regcity + "']");
 
 		}
 
 	}
 
-	public void Fuel(AndroidDriver<MobileElement> driver,String Fuel) throws Exception {
+	public void Fuel(AndroidDriver<MobileElement> driver, String Fuel) throws Exception {
 		// Fuel
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Fuel*']");
@@ -712,19 +740,19 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Fuel*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, Fuel);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Fuel+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Fuel + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Fuel*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, Fuel);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Fuel+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Fuel + "']");
 		}
 
 	}
 
-	public void Transmission(AndroidDriver<MobileElement> driver,String Transmisssion) throws Exception {
+	public void Transmission(AndroidDriver<MobileElement> driver, String Transmisssion) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Transmission*']");
 
@@ -733,19 +761,19 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Transmission*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, Transmisssion);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Transmisssion+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Transmisssion + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Transmission*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, Transmisssion);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Transmisssion+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Transmisssion + "']");
 		}
 
 	}
 
-	public void BodyType(AndroidDriver<MobileElement> driver,String BodyType) throws Exception {
+	public void BodyType(AndroidDriver<MobileElement> driver, String BodyType) throws Exception {
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Body
 		// Type*']");
 		try {
@@ -753,19 +781,19 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Body Type*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, BodyType);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+BodyType+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + BodyType + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Body Type*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, BodyType);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+BodyType+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + BodyType + "']");
 		}
 
 	}
 
-	public void VehicleUsage(AndroidDriver<MobileElement> driver,String Vehicleusage) throws Exception {
+	public void VehicleUsage(AndroidDriver<MobileElement> driver, String Vehicleusage) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Vehicle Usage*']");
 
@@ -774,19 +802,19 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Vehicle Usage*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, Vehicleusage);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Vehicleusage+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Vehicleusage + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Vehicle Usage*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, Vehicleusage);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Vehicleusage+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Vehicleusage + "']");
 		}
 
 	}
 
-	public void Vehiclelength(AndroidDriver<MobileElement> driver,String vehlelength) throws Exception {
+	public void Vehiclelength(AndroidDriver<MobileElement> driver, String vehlelength) throws Exception {
 
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Vehicle length*']");
@@ -796,18 +824,18 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Vehicle length*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, vehlelength);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+vehlelength+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + vehlelength + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Vehicle length*']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, vehlelength);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+vehlelength+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + vehlelength + "']");
 		}
 	}
 
-	public void CustomerPrice(AndroidDriver<MobileElement> driver,String customerprice) throws Exception {
+	public void CustomerPrice(AndroidDriver<MobileElement> driver, String customerprice) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Customer Price*']");
 
@@ -843,7 +871,7 @@ public class BasicDetails {
 		}
 	}
 
-	public void EngineCC(AndroidDriver<MobileElement> driver,String Enginecc) throws Exception {
+	public void EngineCC(AndroidDriver<MobileElement> driver, String Enginecc) throws Exception {
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Engine
 		// CC*']");
 		try {
@@ -872,7 +900,7 @@ public class BasicDetails {
 		}
 	}
 
-	public void CCclass(AndroidDriver<MobileElement> driver,String ccclass) throws Exception {
+	public void CCclass(AndroidDriver<MobileElement> driver, String ccclass) throws Exception {
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='CC
 		// class']");
 		try {
@@ -880,7 +908,7 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='CC class']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, ccclass);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+ccclass+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + ccclass + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
@@ -888,11 +916,11 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='CC class']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, ccclass);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+ccclass+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + ccclass + "']");
 		}
 	}
 
-	public void EngineNumber(AndroidDriver<MobileElement> driver,String enginenumber) throws Exception {
+	public void EngineNumber(AndroidDriver<MobileElement> driver, String enginenumber) throws Exception {
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Engine
 		// Number']");
 		try {
@@ -918,7 +946,7 @@ public class BasicDetails {
 
 	}
 
-	public void ChassisNumber(AndroidDriver<MobileElement> driver,String chassinumber) throws Exception {
+	public void ChassisNumber(AndroidDriver<MobileElement> driver, String chassinumber) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Chassis Number']");
 		try {
@@ -949,7 +977,7 @@ public class BasicDetails {
 		}
 	}
 
-	public void Seat(AndroidDriver<MobileElement> driver,String Seat) throws Exception {
+	public void Seat(AndroidDriver<MobileElement> driver, String Seat) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Seat']");
 
@@ -958,18 +986,18 @@ public class BasicDetails {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Seat']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, Seat);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Seat+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Seat + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Seat']//following-sibling::android.widget.EditText");
 			helper.ScrollToViewElement(driver, "2");
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Seat+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Seat + "']");
 		}
 	}
 
-	public void Color(AndroidDriver<MobileElement> driver,String Color) throws Exception {
+	public void Color(AndroidDriver<MobileElement> driver, String Color) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Color*']");
 
@@ -981,7 +1009,7 @@ public class BasicDetails {
 				System.out.println("Color field is not prefilled");
 				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Color*']");
 				helper.ScrollToViewElement(driver, Color);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Color+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Color + "']");
 
 			} else {
 				System.out.println("Color field is prefilled");
@@ -996,7 +1024,7 @@ public class BasicDetails {
 				System.out.println("Color field is not prefilled");
 				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Color*']");
 				helper.ScrollToViewElement(driver, Color);
-				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Color+"']");
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Color + "']");
 
 			} else {
 				System.out.println("Color field is prefilled");
@@ -1005,7 +1033,7 @@ public class BasicDetails {
 
 	}
 
-	public void Odometer(AndroidDriver<MobileElement> driver,String Odometer) throws Exception {
+	public void Odometer(AndroidDriver<MobileElement> driver, String Odometer) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Odometer working']");
 
@@ -1013,18 +1041,18 @@ public class BasicDetails {
 
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Odometer working']");
 			helper.ScrollToViewElement(driver, Odometer);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Odometer+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Odometer + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Odometer working']");
 			helper.ScrollToViewElement(driver, Odometer);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Odometer+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Odometer + "']");
 		}
 
 	}
 
-	public void OdometerReading(AndroidDriver<MobileElement> driver,String OdometerReading) throws Exception {
+	public void OdometerReading(AndroidDriver<MobileElement> driver, String OdometerReading) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Odometer Reading']");
 
@@ -1066,7 +1094,7 @@ public class BasicDetails {
 
 	}
 
-	public void Accidental(AndroidDriver<MobileElement> driver,String Accidental) throws Exception {
+	public void Accidental(AndroidDriver<MobileElement> driver, String Accidental) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Accidental']");
 
@@ -1074,54 +1102,52 @@ public class BasicDetails {
 
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Accidental']");
 			helper.ScrollToViewElement(driver, Accidental);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Accidental+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Accidental + "']");
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Accidental']");
 			helper.ScrollToViewElement(driver, Accidental);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+Accidental+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + Accidental + "']");
 
 		}
 
 	}
 
-	public void WarrantyRemaining(AndroidDriver<MobileElement> driver,String WarrantyRemaining,String Numberofmonthsremaining,String NumberofKmsRemaining) throws Exception {
+	public void WarrantyRemaining(AndroidDriver<MobileElement> driver, String WarrantyRemaining,
+			String Numberofmonthsremaining, String NumberofKmsRemaining) throws Exception {
 		// helper.clickOnElementByXpath(driver,
 		// "//android.widget.TextView[@text='Warranty Remaining*']");
 		try {
 
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Warranty Remaining*']");
 			helper.ScrollToViewElement(driver, WarrantyRemaining);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+WarrantyRemaining+"']");
-			
-			if(WarrantyRemaining.equalsIgnoreCase("Yes")) {
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + WarrantyRemaining + "']");
+
+			if (WarrantyRemaining.equalsIgnoreCase("Yes")) {
 				this.Numberofmonthsremaining(driver, Numberofmonthsremaining);
 				this.NumberofKmsRemaining(driver, NumberofKmsRemaining);
-			}else {
-				
+			} else {
+
 				try {
 					this.Numberofmonthsremaining(driver, Numberofmonthsremaining);
 					this.NumberofKmsRemaining(driver, NumberofKmsRemaining);
-				}
-				catch(NoSuchElementException e){
-				System.out.println("warranty Remaining value is No so Numberofmonths remaining and Number KMS remining fields are not avaialble ");
+				} catch (NoSuchElementException e) {
+					System.out.println(
+							"warranty Remaining value is No so Numberofmonths remaining and Number KMS remining fields are not avaialble ");
 				}
 			}
-			
-			
-			
-			
 
 		} catch (NoSuchElementException e) {
 			helper.scrollUp(driver);
 			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Warranty Remaining*']");
 			helper.ScrollToViewElement(driver, WarrantyRemaining);
-			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='"+WarrantyRemaining+"']");
+			helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + WarrantyRemaining + "']");
 		}
 	}
 
-	public void Numberofmonthsremaining(AndroidDriver<MobileElement> driver,String Numberofmonthsremaining) throws Exception {
+	public void Numberofmonthsremaining(AndroidDriver<MobileElement> driver, String Numberofmonthsremaining)
+			throws Exception {
 
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Number
 		// of months remaining']");
@@ -1135,38 +1161,36 @@ public class BasicDetails {
 			AppiumHelper.FindElementByXpath(driver,
 					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText")
 					.sendKeys(Numberofmonthsremaining);
-	Thread.sleep(2000);
+			Thread.sleep(2000);
 			System.out.println(AppiumHelper.FindElementByXpath(driver,
-					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText").getText());
-		//System.out.println(AppiumHelper.FindElementByXpath(driver,
-					//"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText").getAttribute("error"));
-			
-		
-			
-			
-			
-			
-		/*	PrintWriter writer 
-            = new PrintWriter(System.out); 
-			
-			
-			 writer.write(Numberofmonthsremaining); 
-			  
-	            // Now check the stream 
-	            // using checkError() method 
-	            System.out.println("\nHas any error occurred: "
-	                               + writer.toString()); 
-			
-			MobileElement el = (MobileElement)AppiumHelper.FindElementByXpath(driver,"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText");
-			//el.requestFocus();
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-            Object o = js.executeScript("mobile: acceptAlert", ImmutableMap.of("target", "element", "elementId", el.getId(), "methods", Arrays.asList(ImmutableMap.of("name", "getError"))));
-            System.out.println(String.valueOf(o));
-		
+					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText")
+					.getText());
+			// System.out.println(AppiumHelper.FindElementByXpath(driver,
+			// "//android.widget.TextView[@text='Number of months
+			// remaining']//following-sibling::android.widget.EditText").getAttribute("error"));
 
-			String str= AppiumHelper.FindElementByXpath(driver,
-					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText").getText().toString();
-			System.out.println("error message : "+str);*/
+			/*
+			 * PrintWriter writer = new PrintWriter(System.out);
+			 * 
+			 * 
+			 * writer.write(Numberofmonthsremaining);
+			 * 
+			 * // Now check the stream // using checkError() method
+			 * System.out.println("\nHas any error occurred: " + writer.toString());
+			 * 
+			 * MobileElement el = (MobileElement)AppiumHelper.FindElementByXpath(
+			 * driver,"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText"
+			 * ); //el.requestFocus(); JavascriptExecutor js = (JavascriptExecutor) driver;
+			 * Object o = js.executeScript("mobile: acceptAlert", ImmutableMap.of("target",
+			 * "element", "elementId", el.getId(), "methods",
+			 * Arrays.asList(ImmutableMap.of("name", "getError"))));
+			 * System.out.println(String.valueOf(o));
+			 * 
+			 * 
+			 * String str= AppiumHelper.FindElementByXpath(driver,
+			 * "//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText"
+			 * ).getText().toString(); System.out.println("error message : "+str);
+			 */
 			// helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='Number of
 			// months remaining']//following-sibling::android.widget.EditText", "12");
 
@@ -1181,42 +1205,38 @@ public class BasicDetails {
 					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText")
 					.sendKeys(Numberofmonthsremaining);
 			Thread.sleep(2000);
-			String str= AppiumHelper.FindElementByXpath(driver,
-					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText").getText().toString();
+			String str = AppiumHelper.FindElementByXpath(driver,
+					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText")
+					.getText().toString();
 			// helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='Number of
 			// months remaining']//following-sibling::android.widget.EditText", "12");
 			System.out.println(AppiumHelper.FindElementByXpath(driver,
-					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText").getText());
-			
-			
-			
-		//	System.out.println(AppiumHelper.FindElementByXpath(driver,
-				//	"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText").getAttribute("error"));
-			
-		
-			
-			
-		//	PrintWriter writer  = new PrintWriter(Numberofmonthsremaining); 
-			
-			
-			/* writer.write(Numberofmonthsremaining); 
-			  
-			 System.out.println("\nHas any error occurred: "
-                     + writer.toString()); */
-	           /* // Now check the stream 
-	            // using checkError() method 
-	            System.out.println("\nHas any error occurred: "
-	                               + writer.checkError()); 
-			*/
-			
-			
-			
-			//System.out.println("error message : "+str);
+					"//android.widget.TextView[@text='Number of months remaining']//following-sibling::android.widget.EditText")
+					.getText());
+
+			// System.out.println(AppiumHelper.FindElementByXpath(driver,
+			// "//android.widget.TextView[@text='Number of months
+			// remaining']//following-sibling::android.widget.EditText").getAttribute("error"));
+
+			// PrintWriter writer = new PrintWriter(Numberofmonthsremaining);
+
+			/*
+			 * writer.write(Numberofmonthsremaining);
+			 * 
+			 * System.out.println("\nHas any error occurred: " + writer.toString());
+			 */
+			/*
+			 * // Now check the stream // using checkError() method
+			 * System.out.println("\nHas any error occurred: " + writer.checkError());
+			 */
+
+			// System.out.println("error message : "+str);
 		}
 
 	}
 
-	public void NumberofKmsRemaining(AndroidDriver<MobileElement> driver,String NumberofKmsRemaining) throws Exception {
+	public void NumberofKmsRemaining(AndroidDriver<MobileElement> driver, String NumberofKmsRemaining)
+			throws Exception {
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Number
 		// of Kms Remaining']");
 
@@ -1244,7 +1264,7 @@ public class BasicDetails {
 
 	}
 
-	public void GeneralRemarks(AndroidDriver<MobileElement> driver,String GeneralRemarks) throws Exception {
+	public void GeneralRemarks(AndroidDriver<MobileElement> driver, String GeneralRemarks) throws Exception {
 		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='']");
 		try {
 
@@ -1278,16 +1298,54 @@ public class BasicDetails {
 		helper.clickOnElementByID(driver, "com.mahindra.ibbtrade_pro:id/submitdata");
 	}
 
-	
 	public void cancelbutton(AndroidDriver<MobileElement> driver) throws Exception {
 		helper.clickOnElementByID(driver, "com.mahindra.ibbtrade_pro:id/cancel_button");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public void Source(AndroidDriver<MobileElement> driver, String source) throws Exception {
+		// Make
+		try {
+			if (AppiumHelper
+					.FindElementByXpath(driver,
+							"//android.widget.TextView[@text='Source*']//following-sibling::android.widget.EditText")
+					.getText().isEmpty()
+					| AppiumHelper.FindElementByXpath(driver,
+							"//android.widget.TextView[@text='Source*']//following-sibling::android.widget.EditText")
+							.getText().equals("Select Source")) {
+				System.out.println("Source field is not prefilled / field value is resetted");
+				AppiumHelper.FindElementByXpath(driver,
+						"//android.widget.TextView[@text='Source*']//following-sibling::android.widget.EditText")
+						.click();
+
+				helper.ScrollToViewElement(driver, source);
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + source + "']");
+
+			} else {
+				System.out.println("Source field is prefilled");
+
+			}
+		} catch (NoSuchElementException e) {
+			helper.scrollUp(driver);
+			if (AppiumHelper
+					.FindElementByXpath(driver,
+							"//android.widget.TextView[@text='Source*']//following-sibling::android.widget.EditText")
+					.getText().isEmpty()
+					| AppiumHelper.FindElementByXpath(driver,
+							"//android.widget.TextView[@text='Source*']//following-sibling::android.widget.EditText")
+							.getText().equals("Select Source")) {
+				System.out.println("Source field is not prefilled / field value is resetted");
+				AppiumHelper.FindElementByXpath(driver,
+						"//android.widget.TextView[@text='Source*']//following-sibling::android.widget.EditText")
+						.click();
+
+				helper.ScrollToViewElement(driver, source);
+				helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='" + source + "']");
+
+			} else {
+				System.out.println("Source field is prefilled");
+
+			}
+		}
+	}
+
 }

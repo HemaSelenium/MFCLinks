@@ -27,7 +27,7 @@ public class PendingUsecases extends BaseClass {
 		pending.ModelYear(driver);
 		pending.ModelName(driver);
 		pending.Variant(driver);
-		String regnumber = pending.RegNumber(driver);
+		String regnumber = Pending.RegNumber(driver);
 		pending.City(driver);
 		pending.ManfYear(driver);
 		pending.KMS(driver);

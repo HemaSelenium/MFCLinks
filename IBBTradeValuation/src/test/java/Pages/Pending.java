@@ -21,7 +21,8 @@ public class Pending {
 	public static String City="com.mahindra.ibbtrade_pro:id/cityName";
 	public static String ManfYear="com.mahindra.ibbtrade_pro:id/year";
 	public static String KMS="com.mahindra.ibbtrade_pro:id/distance_covered";
-
+	public static String CompletedDate="com.mahindra.ibbtrade_pro:id/year";
+	
 	
 	public void Make(AndroidDriver<MobileElement> driver) {
 		try {
@@ -84,5 +85,13 @@ public class Pending {
 			System.out.println("KMS is not displayed");
 		}
 	}
+	public void completedDate(AndroidDriver<MobileElement> driver) {
+		try {
+			System.out.println("completed date is displayed as: "+AppiumHelper.FindElementById(driver, CompletedDate).getText());
+		}catch(NoSuchElementException e){
+			System.out.println("completed date is not displayed");
+		}
+	}
+	
 	
 }

@@ -3,13 +3,22 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mainTestcases.links2">
+      <class name="mainTestcases.Valuatelead">
         <methods>
-          <include name="setUp"/>
+          <include name="TestcaseEnd"/>
+          <include name="TestDrive" invocation-numbers="0"/>
+          <include name="VehFeatures" invocation-numbers="0"/>
+          <include name="Documents" invocation-numbers="0"/>
+          <include name="APKFIleAvailability"/>
           <include name="tearDown"/>
-          <include name="testLinks"/>
+          <include name="EXteriors" invocation-numbers="0"/>
+          <include name="Interior" invocation-numbers="0"/>
+          <include name="basicDetails" invocation-numbers="0"/>
+          <include name="underBody" invocation-numbers="0"/>
+          <include name="Underhood" invocation-numbers="0"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- mainTestcases.links2 -->
+      </class> <!-- mainTestcases.Valuatelead -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -355,7 +355,7 @@ public class AppiumHelper {
 					
 		}
 		
-		if(strings.equalsIgnoreCase("All Ok")) {
+		/*if(strings.equalsIgnoreCase("All Ok")) {
 			try {
 				clickOnElementByID(driver, "com.mahindra.ibbtrade_pro:id/awsimage_one");
 				System.out.println("input selected as All Ok even though images are  displaying");	
@@ -369,13 +369,14 @@ public class AppiumHelper {
 				}
 				else {
 					
-					captureimageone(driver);
-					Remarks(driver);
+					//captureimageone(driver);
+					//Remarks(driver);
 					driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Done\"));")
 							.click();
 					;
-				}
-
+				}*/
+		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Done\"));")
+		.click();
 	}
 	
 	

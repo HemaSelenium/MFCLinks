@@ -2,11 +2,11 @@
  * 
  */
 package mainTestcases;
-
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import Pages.Documents;
+import common.AppiumHelper;
 import common.BaseClass;
 import common.DataProviders;
 
@@ -18,8 +18,11 @@ import common.DataProviders;
 public class Valuatelead extends BaseClass {
 	
 	@Test(priority = 1,dataProvider = "BasicDetails", dataProviderClass = DataProviders.class)
-	public void BasicDetails(String InspectiionType,String Newcardelaership,String Selectnewcardealership,String Newcardealershiifothers,String Newcarexecutive,String CustomerName,String Customermobilenumber,String Customeraddress,String customeremailid,String Manufacturingyear,String Make,String Model,String Variant,String Registered,String Registeredyear,String Ownershipnumber,String registrationstate,String Regcity, String Fuel,String Transmisssion,String BodyType,String Vehicleusage,String vehlelength,String customerprice,String Enginecc,String ccclass, String enginenumber,String chassinumber,String seat,String color,String odometerworking,String odometerreading,String accidental,String warrantyremaining,String numberofmonthsremaining,String numberofkmsremaining,String generalremarks) throws Exception {
+public void basicDetails(String InspectiionType,String Newcardelaership,String Selectnewcardealership,String Newcardealershiifothers,String Newcarexecutive,String CustomerName,String Customermobilenumber,String Customeraddress,String customeremailid,String Manufacturingyear,String Make,String Model,String Variant,String Registered,String Registeredyear,String Ownershipnumber,String registrationstate,String Regcity, String Fuel,String Transmisssion,String BodyType,String Vehicleusage,String vehlelength,String customerprice,String Enginecc,String ccclass, String enginenumber,String chassinumber,String seat,String color,String odometerworking,String odometerreading,String accidental,String warrantyremaining,String numberofmonthsremaining,String numberofkmsremaining,String generalremarks) throws Exception {
 
+		
+		int mfgYear=Integer.parseInt(Manufacturingyear);
+	//	System.err.println(mfgYear);
 		helper.clickOnElementByID(driver, "com.mahindra.ibbtrade_pro:id/mainBut1");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		helper.clickOnElementByID(driver, "com.mahindra.ibbtrade_pro:id/valuateNow");
@@ -27,25 +30,7 @@ public class Valuatelead extends BaseClass {
 		
 		basicDetails.inspectionType(driver, InspectiionType);
 		basicDetails.NewCarDealership(driver, Newcardelaership, Selectnewcardealership, Newcardealershiifothers, Newcarexecutive);
-		
-		/*helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Inspection Type*']");
-		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Field']");*/
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='New Car Dealership*']");
-		helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='No']");
-		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='Select
-		// New Car Dealership']");
-		// helper.clickOnElementByXpath(driver, "//android:id/text1[@text='NO NCD
-		// Details']");
-		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='New
-		// Car Dealership(if others)']");
-		// helper.clickOnElementByXpath(driver, "//android:id/text1[@text='Field']");
-		// helper.clickOnElementByXpath(driver, "//android.widget.TextView[@text='New
-		// Car Executive']");
-		// helper.SendkeysByXpath(driver, "//android.widget.TextView[@text='New Car
-		// Executive']", "");
-
 		basicDetails.CustomerName(driver, CustomerName);
 		basicDetails.Mobilenumber(driver, Customermobilenumber);
 		basicDetails.Address(driver, Customeraddress);
@@ -56,7 +41,7 @@ public class Valuatelead extends BaseClass {
 		basicDetails.Model(driver, Model);
 		basicDetails.Variant(driver, Variant);
 		basicDetails.Registered(driver, Registered);
-		basicDetails.Registeredyear(driver, Registeredyear);
+		basicDetails.Registeredyear(driver,Integer.toString(mfgYear-2));
 		basicDetails.RegNumber(driver);
 		basicDetails.Ownership(driver, Ownershipnumber);
 		basicDetails.Regstate(driver, registrationstate);
@@ -77,10 +62,18 @@ public class Valuatelead extends BaseClass {
 		basicDetails.OdometerReading(driver, odometerreading);
 		basicDetails.Accidental(driver, accidental);
 		basicDetails.WarrantyRemaining(driver, warrantyremaining,numberofmonthsremaining,numberofkmsremaining);
-		//basicDetails.Numberofmonthsremaining(driver, numberofmonthsremaining);
-		//basicDetails.NumberofKmsRemaining(driver, numberofkmsremaining);
 		basicDetails.GeneralRemarks(driver, generalremarks);
 		basicDetails.Submit(driver);
+		
+		
+		if (AppiumHelper.FindElementById(driver, Documents.Documents).isDisplayed()) {
+			System.err.println("When Registration year is given lessthan the Manfacture year , basic details got submitted and allowed the user to next step");
+				
+		}else {
+			System.out.println("When Registration year is given lessthan the Manfacture year , not allowed the user to next step");
+		}
+
+	
 
 	}
 

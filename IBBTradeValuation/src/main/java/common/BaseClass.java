@@ -47,8 +47,8 @@ public class BaseClass {
 	protected static VehicleFeatures vehfeatures=new VehicleFeatures();
 	
 	protected static Pending pending=new Pending();
-	public static String Username="fresh_val";
-	public static String Password="test123";
+	public static String Username="4wval1";
+	public static String Password="4WVAL1";
 	public static String Username_2ndValuator="valuator_new";
 	public static String Password_2ndValuator="valuator_new";
 	
@@ -104,8 +104,8 @@ public class BaseClass {
 	/*//	Hema
 		caps.setCapability(MobileCapabilityType.UDID, "3c5c437");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi");
-		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1.0");*/
-		
+		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1.0");
+		*/
 		
 		/*//Sony
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Sony");
@@ -114,7 +114,7 @@ public class BaseClass {
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
 		
 */
-	//caps.setCapability(MobileCapabilityType.APP, getLatestFilefromDir(folder).getAbsolutePath());
+	caps.setCapability(MobileCapabilityType.APP, getLatestFilefromDir(folder).getAbsolutePath());
 		//caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0.1");
 
 

@@ -1,25 +1,1302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="8" ignored="0" total="9" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[*******Default suite******* STARTED *******]]>
+    </line>
+    <line>
+      <![CDATA[==================================================================================================]]>
+    </line>
+    <line>
+      <![CDATA[========Testcase ========AndroidDriver====== Ended ========]]>
+    </line>
+    <line>
+      <![CDATA[===================   ==================    =======================   =====================]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="139784" started-at="2020-03-12T03:05:47Z" finished-at="2020-03-12T03:08:06Z">
+  <suite name="Default suite" duration-ms="196247" started-at="2020-03-24T11:04:07Z" finished-at="2020-03-24T11:07:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="139784" started-at="2020-03-12T03:05:47Z" finished-at="2020-03-12T03:08:06Z">
-      <class name="mainTestcases.links2">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:mainTestcases.links2@520a3426]" name="setUp" is-config="true" duration-ms="9401" started-at="2020-03-12T03:05:47Z" finished-at="2020-03-12T03:05:56Z">
+    <test name="Default test" duration-ms="196247" started-at="2020-03-24T11:04:07Z" finished-at="2020-03-24T11:07:23Z">
+      <class name="mainTestcases.Valuatelead">
+        <test-method status="PASS" signature="APKFIleAvailability()[pri:0, instance:mainTestcases.Valuatelead@42f93a98]" name="APKFIleAvailability" is-config="true" duration-ms="89" started-at="2020-03-24T11:03:44Z" finished-at="2020-03-24T11:03:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- APKFIleAvailability -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:mainTestcases.Valuatelead@42f93a98]" name="setUp" is-config="true" duration-ms="22752" started-at="2020-03-24T11:03:44Z" finished-at="2020-03-24T11:04:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLinks()[pri:0, instance:mainTestcases.links2@520a3426]" name="testLinks" duration-ms="129704" started-at="2020-03-12T03:05:56Z" finished-at="2020-03-12T03:08:06Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:mainTestcases.Valuatelead@42f93a98]" name="login" duration-ms="10183" started-at="2020-03-24T11:04:07Z" finished-at="2020-03-24T11:04:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLinks -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mainTestcases.links2@520a3426]" name="tearDown" is-config="true" duration-ms="651" started-at="2020-03-12T03:08:06Z" finished-at="2020-03-12T03:08:06Z">
+        </test-method> <!-- login -->
+        <test-method status="FAIL" signature="basicDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mainTestcases.Valuatelead@42f93a98]" name="basicDetails" duration-ms="22484" started-at="2020-03-24T11:04:20Z" data-provider="BasicDetails" finished-at="2020-03-24T11:04:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Field]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[anjali]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[hema]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Hema]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[7774567456]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[bangalore]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[hema@mahindra.com]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[2014]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[BENTLEY]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[MULSANNE]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[V8]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[2015]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Andhra Pradesh]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[CHITTOOR]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[Petrol]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[Manual]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[SUV]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[Personal]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[Less than 4 meters]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[Less than 1.5L]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[ap183783]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[ap183783]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[Gold]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[Remarks]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/valuateNow}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/valuateNow}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at common.AppiumHelper.FindElementById(AppiumHelper.java:48)
+at common.AppiumHelper.clickOnElementByID(AppiumHelper.java:78)
+at mainTestcases.Valuatelead.basicDetails(Valuatelead.java:28)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basicDetails -->
+        <test-method status="FAIL" signature="underBody(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:mainTestcases.Valuatelead@42f93a98]" name="underBody" duration-ms="22071" started-at="2020-03-24T11:04:43Z" data-provider="UnderBody" finished-at="2020-03-24T11:05:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Crack / Water leakage,Engine mounting damage]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[All Ok]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Front strut leakage]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Front Disc/Calliper damage,Rear brake drum damage]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Fuel lines protector damage]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Damaged]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/under_body}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/under_body}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at common.AppiumHelper.FindElementById(AppiumHelper.java:48)
+at common.AppiumHelper.clickOnElementByID(AppiumHelper.java:78)
+at mainTestcases.Valuatelead.underBody(Valuatelead.java:119)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- underBody -->
+        <test-method status="FAIL" signature="TestDrive(java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:mainTestcases.Valuatelead@42f93a98]" name="TestDrive" duration-ms="21849" started-at="2020-03-24T11:05:06Z" data-provider="Testdrive" finished-at="2020-03-24T11:05:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Engine Smoke – White,Engine Smoke – Blue]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Low acceleration / low pickup]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Auto-gear shift – not ok,Gear shifting hard]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/testDrive}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/testDrive}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at common.AppiumHelper.FindElementById(AppiumHelper.java:48)
+at common.AppiumHelper.clickOnElementByID(AppiumHelper.java:78)
+at mainTestcases.Valuatelead.TestDrive(Valuatelead.java:105)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestDrive -->
+        <test-method status="FAIL" signature="Documents(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:mainTestcases.Valuatelead@42f93a98]" name="Documents" duration-ms="22407" started-at="2020-03-24T11:05:29Z" data-provider="Documents" finished-at="2020-03-24T11:05:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Photocopy]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Third-Party]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Bharti AXA Motor Insurance Company]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[HDFC Bank]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/document}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/document}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at common.AppiumHelper.FindElementById(AppiumHelper.java:48)
+at common.AppiumHelper.clickOnElementByID(AppiumHelper.java:78)
+at mainTestcases.Valuatelead.Documents(Valuatelead.java:86)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Documents -->
+        <test-method status="FAIL" signature="Underhood(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:mainTestcases.Valuatelead@42f93a98]" name="Underhood" duration-ms="22243" started-at="2020-03-24T11:05:52Z" data-provider="UnderTheHood" finished-at="2020-03-24T11:06:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Structural damage – LH,Structural damage – RH]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Needs to be recharged,Needs replacement]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Radiator cap gasket not available/broken/damaged,Radiator damage]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Damaged,Needs replacement]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Fan clutch not working,Blade damage]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Oil needs replacement,Leakage]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Booster wornout,Leakage]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Engine mounts damaged,Belt & bearing - Chain noisy/ Worn/Damage]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/under_the_hood}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/under_the_hood}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at common.AppiumHelper.FindElementById(AppiumHelper.java:48)
+at common.AppiumHelper.clickOnElementByID(AppiumHelper.java:78)
+at mainTestcases.Valuatelead.Underhood(Valuatelead.java:139)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Underhood -->
+        <test-method status="FAIL" signature="VehFeatures(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:6, instance:mainTestcases.Valuatelead@42f93a98]" name="VehFeatures" duration-ms="22280" started-at="2020-03-24T11:06:15Z" data-provider="VehicleFeatures" finished-at="2020-03-24T11:06:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Not working]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Speakers not ok]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Not working]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Not working]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Not applicable]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sunroof switch physical condition not ok]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Fabric]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Not working]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Not working]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Not working]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Not working]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[AMT]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/testDrive}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/testDrive}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at common.AppiumHelper.FindElementById(AppiumHelper.java:48)
+at common.AppiumHelper.clickOnElementByID(AppiumHelper.java:78)
+at mainTestcases.Valuatelead.VehFeatures(Valuatelead.java:164)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VehFeatures -->
+        <test-method status="FAIL" signature="Interior(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:7, instance:mainTestcases.Valuatelead@42f93a98]" name="Interior" duration-ms="21994" started-at="2020-03-24T11:06:38Z" data-provider="Interior" finished-at="2020-03-24T11:07:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pasting or drilling on dashboard,Cluster mounting not ok]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rear RH power window/motor not ok,Rear LH power window/motor not ok]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Manual lock function not ok]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Function - not ok,Hand brake release but brake warning light glows]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[RH Seat height adjustment not ok]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Central lock not working from Key]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Turn signal switch not ok]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Steering wheel moulding worn out/torn out ]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[LH ORVM - Mechanism not Ok]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[All Ok]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Structural Damage (Floor / under carpet)]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Seat material torn/faded/burnt/holes]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/interior}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/interior}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at common.AppiumHelper.FindElementById(AppiumHelper.java:48)
+at common.AppiumHelper.clickOnElementByID(AppiumHelper.java:78)
+at mainTestcases.Valuatelead.Interior(Valuatelead.java:192)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Interior -->
+        <test-method status="FAIL" signature="EXteriors(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:8, instance:mainTestcases.Valuatelead@42f93a98]" name="EXteriors" duration-ms="22207" started-at="2020-03-24T11:07:01Z" data-provider="Exterior" finished-at="2020-03-24T11:07:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Structural Damage – RH,Repaired]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Repaired/repainted,Structural damage]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Deformed/Damaged,Repaired]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Needs repair,Damaged]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Rusted,Latch not working]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Glass crack,Needs replacement]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Faded reflector & rusty,Not applicable]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Glass crack,Needs replacement]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Rusted,Repainted]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Mirror Broken,Cover Damage]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Damaged,Rusted]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Uneven Wear]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Repainted,Needs Repair / Repaint]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Repainted,Rusted]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Rusted,Replaced]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Damaged,Rusted]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[Uneven Wear]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Rusted,Repainted]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[Needs replacement,Glass crack]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[Repaired,Repainted]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[Moulding Damage,Wiper coating peel off]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[Rusted,Replaced]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[Rusted,Needs repair/repaint]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[Wheel/Rim damaged,Uneven Wear]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[Jack + Handle missing]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[Repainted,Replaced]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[Bent,Needs Replacement]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[Uneven Wear]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[Replaced,Handle/Door Lock not working]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[Repainted,Replaced]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[Rusted,Replaced]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[Bent,Rusted]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[Uneven Wear]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[Mirror Broken,Needs Replacement]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[Rusted,Replaced]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[Needs replacement,Glass crack]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[Rusted,Needs Repair / Repaint]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/exterior}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.A..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 40f98c7b-a42f-444d-8b32-e6b4535c5581
+*** Element info: {Using=id, value=com.mahindra.ibbtrade_pro:id/exterior}
+at sun.reflect.GeneratedConstructorAccessor36.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+at common.AppiumHelper.FindElementById(AppiumHelper.java:48)
+at common.AppiumHelper.clickOnElementByID(AppiumHelper.java:78)
+at mainTestcases.Valuatelead.EXteriors(Valuatelead.java:226)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EXteriors -->
+        <test-method status="PASS" signature="TestcaseEnd()[pri:0, instance:mainTestcases.Valuatelead@42f93a98]" name="TestcaseEnd" is-config="true" duration-ms="1" started-at="2020-03-24T11:07:23Z" finished-at="2020-03-24T11:07:23Z">
+          <reporter-output>
+            <line>
+              <![CDATA[==================================================================================================]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestcaseEnd -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mainTestcases.Valuatelead@42f93a98]" name="tearDown" is-config="true" duration-ms="1643" started-at="2020-03-24T11:07:24Z" finished-at="2020-03-24T11:07:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[========Testcase ========AndroidDriver====== Ended ========]]>
+            </line>
+            <line>
+              <![CDATA[===================   ==================    =======================   =====================]]>
+            </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mainTestcases.links2 -->
+      </class> <!-- mainTestcases.Valuatelead -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

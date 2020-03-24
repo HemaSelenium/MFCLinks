@@ -225,6 +225,10 @@ public class DataProviders {
 	    return GetInput("BasicDetails");
 	}
 	
+	@DataProvider(name ="BasicDetails_DirectVal")
+	protected Object[][] BasicDetails_Directval() throws FileNotFoundException, IOException {
+	    return GetInput("BasicDetails_DirectVal");
+	}
 	
 	@DataProvider(name ="MFCWRLS")
 	protected Object[][] URLS() throws FileNotFoundException, IOException {
