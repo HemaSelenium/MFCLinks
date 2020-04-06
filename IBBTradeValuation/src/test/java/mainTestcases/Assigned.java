@@ -19,7 +19,7 @@ public class Assigned extends BaseClass{
 	public static String valuationTime="com.mahindra.ibbtrade_pro:id/valuation_time";
 	public static String MakeAndModel="com.mahindra.ibbtrade_pro:id/CarName";
 	public static String Variant="com.mahindra.ibbtrade_pro:id/variant";
-	public static String leadId="com.mahindra.ibbtrade_pro:id/leadId";
+	public static String leadId="com.mahindra.ibbtrade_pro:id/lead_id";
 	public static String Custmername="com.mahindra.ibbtrade_pro:id/contact";
 	public static String CustmerMobilenumber="com.mahindra.ibbtrade_pro:id/cusmobnumber";
 	public static String Address="com.mahindra.ibbtrade_pro:id/view_address";
@@ -43,13 +43,10 @@ public class Assigned extends BaseClass{
 	
 	private static Pattern dateFrmtPtrn = 
             Pattern.compile("^\\d{1,2} [a-zA-Z]{3} \\d{4} [|] \\d{1,2}[:]\\d{1,2}[ ]");
-	@Test(priority=2)
-	public void val_time() throws Exception {
+	@Test(priority=1)
+	public void Leaddetails() throws Exception {
 		Thread.sleep(2000);
 		AppiumHelper.FindElementByXpath(driver, HomePage.Assignedbutton).click();
-		
-		
-		
 		
 			if (AppiumHelper.FindElementById(driver, valuationTime).isDisplayed()) {
 			
@@ -126,9 +123,9 @@ public class Assigned extends BaseClass{
 		}
 	}
 	public void Address() {
-		if (AppiumHelper.FindElementById(driver, Manfactureyear).isDisplayed()) {
+		if (AppiumHelper.FindElementById(driver, Address).isDisplayed()) {
 			
-			AppiumHelper.FindElementById(driver, Manfactureyear).click();
+			AppiumHelper.FindElementById(driver, Address).click();
 			
 			String ScheduledTime=AppiumHelper.FindElementById(driver, InspectionAddress).getText();
 			System.out.println("Address : "+ScheduledTime);
@@ -171,13 +168,13 @@ public class Assigned extends BaseClass{
 			Thread.sleep(2000);
 			String currentactivity=driver.currentActivity();
 			String callactivity="com.android.incallui.InCallActivity";
-			System.out.println(currentactivity);
-			System.out.println(callactivity);
+			//System.out.println(currentactivity);
+			//System.out.println(callactivity);
 			
 			if(currentactivity.equalsIgnoreCase(callactivity)){
 				
 				System.out.println("when click on call button, dial screen is displayed");
-				
+				AppiumHelper.FindElementById(driver, "com.google.android.dialer:id/incall_end_call").click();
 			}
 			else {
 				//System.out.println(driver.getCurrentPackage());

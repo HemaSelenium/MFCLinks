@@ -64,9 +64,7 @@ public void basicDetails(String InspectiionType,String Newcardelaership,String S
 		basicDetails.WarrantyRemaining(driver, warrantyremaining,numberofmonthsremaining,numberofkmsremaining);
 		basicDetails.GeneralRemarks(driver, generalremarks);
 		basicDetails.Submit(driver);
-		
-		
-		
+				
 		if (AppiumHelper.FindElementById(driver, Documents.Documents).isDisplayed()) {
 			System.err.println("When Registration year is given lessthan the Manfacture year , basic details got submitted and allowed the user to next step");
 				

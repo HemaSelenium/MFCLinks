@@ -1,12 +1,149 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Autoinspekt-Testcases">
+<suite name="Ibbtrade Valuation -Testcases">
 
-	<test name="All tests">
-	 
-	<classes>
-			<class name="mainTestcases.links2" >
+	<test name="All testcases">
+	
+		<classes>
+		
+		<class name="mainTestcases.loginAfterDenyPermissions" >
+			<methods>
+				<include  name="login" />
+				</methods>
 			</class>
+			
+			
+			
+			<class name="mainTestcases.HomePage" >
+			<methods>
+				<include  name="homepage" />
+				</methods>
+			</class>
+			
+			<class name="mainTestcases.loginAfterDenyPermissions" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			
+			
+			<class name="mainTestcases.Assigned" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			
+			<class name="mainTestcases.BasicDetails" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			
+			
+			
+			
+		
+			<class name="mainTestcases.ChnagePassword" >
+			<methods>
+				<include  name="Leaddetails" />
+				</methods>
+			</class>
+			
+			<class name="mainTestcases.Dashboard" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			
+			
+			<class name="mainTestcases.DirectValuation_Basicdetails" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			
+			<class name="mainTestcases.DirectValuation_Documents" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.DirectValuation_Exteriors" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.DirectValuation_Features" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.DirectValuation_interiors" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.DirectValuation_TestDrive" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.DirectValuation_Underbody" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.DirectValuation_Underthehood" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.documents" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.ExteriersUsecases" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.FeaturesUsecases" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.InterioruseCases" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			
+			<class name="mainTestcases.PendingUsecases" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.TestDriveUseCases" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.UnderBodyUseases" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			
+			<class name="mainTestcases.UndertheHood" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			<class name="mainTestcases.viewreport2" >
+			<methods>
+				<include  name="basicDetails" />
+				</methods>
+			</class>
+			
 			</classes>
 			</test>
-
 </suite>

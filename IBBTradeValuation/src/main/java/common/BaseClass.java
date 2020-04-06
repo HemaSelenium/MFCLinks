@@ -47,8 +47,8 @@ public class BaseClass {
 	protected static VehicleFeatures vehfeatures=new VehicleFeatures();
 	
 	protected static Pending pending=new Pending();
-	public static String Username="4wval1";
-	public static String Password="4WVAL1";
+	public static String Username="fresh_val";
+	public static String Password="test123";
 	public static String Username_2ndValuator="valuator_new";
 	public static String Password_2ndValuator="valuator_new";
 	
@@ -129,7 +129,8 @@ caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0.0");*/
 		caps.setCapability("unicodeKeyboard", "true");
 		caps.setCapability("automationName", "UiAutomator2");
 		caps.setCapability("appPackage", "com.mahindra.ibbtrade_pro");
-		caps.setCapability("appActivity", "com.mahindra.ibbtrade_pro.Activity.SplashActivity");
+	//	caps.setCapability("appActivity", "com.mahindra.ibbtrade_pro.Activity.SplashActivity");
+		caps.setCapability("appActivity", "com.mahindra.ibbtrade_pro.splashScreen.view.SplashActivity");
 		caps.setCapability("autoGrantPermissions",true);
 		driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
 			driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);

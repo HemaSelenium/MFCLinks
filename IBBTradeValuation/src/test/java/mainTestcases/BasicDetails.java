@@ -2,11 +2,9 @@
  * 
  */
 package mainTestcases;
-
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
-
 import Pages.Documents;
 import common.AppiumHelper;
 import common.BaseClass;
@@ -23,14 +21,19 @@ public class BasicDetails extends BaseClass{
 		
 		int mfgYear=Integer.parseInt(Manufacturingyear);
 	//	System.err.println(mfgYear);
+		try {
 		helper.clickOnElementByID(driver, "com.mahindra.ibbtrade_pro:id/mainBut1");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		}
+		catch(NoSuchElementException e) {
+			System.out.println("Assigned button is not present in active screen");
+		}
 		helper.clickOnElementByID(driver, "com.mahindra.ibbtrade_pro:id/valuateNow");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		basicDetails.inspectionType(driver, InspectiionType);
-		basicDetails.NewCarDealership(driver, Newcardelaership, Selectnewcardealership, Newcardealershiifothers, Newcarexecutive);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		basicDetails.sjdfkjsj(driver, Newcardelaership, Selectnewcardealership, Newcardealershiifothers, Newcarexecutive);
+		//basicDetails.NewCarDealership(driver, Newcardelaership, Selectnewcardealership, Newcardealershiifothers, Newcarexecutive);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		basicDetails.CustomerName(driver, CustomerName);
 		basicDetails.Mobilenumber(driver, Customermobilenumber);
 		basicDetails.Address(driver, Customeraddress);
