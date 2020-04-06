@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
     <line>
       <![CDATA[*******Default suite******* STARTED *******]]>
@@ -14,284 +14,35 @@
       <![CDATA[===================   ==================    =======================   =====================]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40194" started-at="2020-04-06T10:11:45Z" finished-at="2020-04-06T10:12:26Z">
+  <suite name="Default suite" duration-ms="25882" started-at="2020-04-06T13:42:38Z" finished-at="2020-04-06T13:43:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40194" started-at="2020-04-06T10:11:45Z" finished-at="2020-04-06T10:12:26Z">
-      <class name="mainTestcases.BasicDetails">
-        <test-method status="PASS" signature="APKFIleAvailability()[pri:0, instance:mainTestcases.BasicDetails@631330c]" name="APKFIleAvailability" is-config="true" duration-ms="76" started-at="2020-04-06T10:11:29Z" finished-at="2020-04-06T10:11:29Z">
+    <test name="Default test" duration-ms="25882" started-at="2020-04-06T13:42:38Z" finished-at="2020-04-06T13:43:03Z">
+      <class name="mainTestcases.Dashboard">
+        <test-method status="PASS" signature="APKFIleAvailability()[pri:0, instance:mainTestcases.Dashboard@2353b3e6]" name="APKFIleAvailability" is-config="true" duration-ms="73" started-at="2020-04-06T13:42:23Z" finished-at="2020-04-06T13:42:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- APKFIleAvailability -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:mainTestcases.BasicDetails@631330c]" name="setUp" is-config="true" duration-ms="16068" started-at="2020-04-06T10:11:29Z" finished-at="2020-04-06T10:11:45Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:mainTestcases.Dashboard@2353b3e6]" name="setUp" is-config="true" duration-ms="14709" started-at="2020-04-06T13:42:23Z" finished-at="2020-04-06T13:42:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login()[pri:0, instance:mainTestcases.BasicDetails@631330c]" name="login" duration-ms="10256" started-at="2020-04-06T10:11:45Z" finished-at="2020-04-06T10:11:56Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:mainTestcases.Dashboard@2353b3e6]" name="login" duration-ms="10570" started-at="2020-04-06T13:42:38Z" finished-at="2020-04-06T13:42:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="FAIL" signature="basicDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:mainTestcases.BasicDetails@631330c]" name="basicDetails" duration-ms="27821" started-at="2020-04-06T10:11:57Z" data-provider="BasicDetails" finished-at="2020-04-06T10:12:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Field]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Yes]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[no]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[anjali]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[hema]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Hema]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[7774567456]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[bangalore]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[hema@mahindra.com]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[2014]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[BENTLEY]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[MULSANNE]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[V8]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[yes]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[2015]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[Andhra Pradesh]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[CHITTOOR]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[Petrol]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[Manual]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[SUV]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[Personal]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[Less than 4 meters]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[Less than 1.5L]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[ap183783]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[ap183783]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[Gold]]>
-              </value>
-            </param>
-            <param index="30">
-              <value>
-                <![CDATA[Yes]]>
-              </value>
-            </param>
-            <param index="31">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-            <param index="32">
-              <value>
-                <![CDATA[Yes]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[Yes]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[Remarks]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Swipe did not complete successfully
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.s..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.s..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: d98809fa-8702-4d15-9b24-69093afb4688]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Swipe did not complete successfully
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-070DR37', ip: '192.168.43.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.s..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , databaseEnabled: false, desired: {app: C:\Users\Hema Sumanjali\git..., appActivity: com.mahindra.ibbtrade_pro.s..., appPackage: com.mahindra.ibbtrade_pro, autoGrantPermissions: true, automationName: UiAutomator2, browserName: , deviceName: Pixel XL API 28 2, noReset: true, platformName: android, unicodeKeyboard: true}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2560, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 84, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 2308, left: 0, top: 84, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: d98809fa-8702-4d15-9b24-69093afb4688
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at io.appium.java_client.PerformsTouchActions.performTouchAction(PerformsTouchActions.java:41)
-at io.appium.java_client.TouchAction.perform(TouchAction.java:187)
-at common.AppiumHelper.scrollUp(AppiumHelper.java:284)
-at Pages.BasicDetails.Address(BasicDetails.java:244)
-at mainTestcases.BasicDetails.basicDetails(BasicDetails.java:39)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method status="PASS" signature="dashboard()[pri:0, instance:mainTestcases.Dashboard@2353b3e6]" name="dashboard" duration-ms="14246" started-at="2020-04-06T13:42:49Z" finished-at="2020-04-06T13:43:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- basicDetails -->
-        <test-method status="PASS" signature="TestcaseEnd()[pri:0, instance:mainTestcases.BasicDetails@631330c]" name="TestcaseEnd" is-config="true" duration-ms="0" started-at="2020-04-06T10:12:26Z" finished-at="2020-04-06T10:12:26Z">
+        </test-method> <!-- dashboard -->
+        <test-method status="PASS" signature="TestcaseEnd()[pri:0, instance:mainTestcases.Dashboard@2353b3e6]" name="TestcaseEnd" is-config="true" duration-ms="1" started-at="2020-04-06T13:43:03Z" finished-at="2020-04-06T13:43:03Z">
           <reporter-output>
             <line>
               <![CDATA[==================================================================================================]]>
             </line>
           </reporter-output>
         </test-method> <!-- TestcaseEnd -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mainTestcases.BasicDetails@631330c]" name="tearDown" is-config="true" duration-ms="1363" started-at="2020-04-06T10:12:26Z" finished-at="2020-04-06T10:12:27Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mainTestcases.Dashboard@2353b3e6]" name="tearDown" is-config="true" duration-ms="1402" started-at="2020-04-06T13:43:03Z" finished-at="2020-04-06T13:43:05Z">
           <reporter-output>
             <line>
               <![CDATA[========Testcase ========AndroidDriver====== Ended ========]]>
@@ -301,7 +52,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- mainTestcases.BasicDetails -->
+      </class> <!-- mainTestcases.Dashboard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -68,14 +68,15 @@ public class BasicDetails extends BaseClass{
 		basicDetails.GeneralRemarks(driver, generalremarks);
 		basicDetails.Submit(driver);
 		
-		
+		try {
 		if (AppiumHelper.FindElementById(driver, Documents.Documents).isDisplayed()) {
-			System.err.println("When Registration year is given lessthan the Manfacture year , basic details got submitted and allowed the user to next step");
+			System.out.println("After submit the Basic Details, page is not redirected dashboard");
 				
-		}else {
-			System.out.println("When Registration year is given lessthan the Manfacture year , not allowed the user to next step");
 		}
-
+		}
+		catch(NoSuchElementException e) {
+			System.err.println("After submit the Basic Details, page is not redirected dashboard");
+		}
 	}
 
 }

@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mainTestcases.BasicDetails">
+      <class name="mainTestcases.Dashboard">
         <methods>
-          <include name="basicDetails" invocation-numbers="0"/>
           <include name="TestcaseEnd"/>
           <include name="APKFIleAvailability"/>
           <include name="tearDown"/>
+          <include name="dashboard"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- mainTestcases.BasicDetails -->
+      </class> <!-- mainTestcases.Dashboard -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

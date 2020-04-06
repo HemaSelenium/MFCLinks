@@ -235,6 +235,8 @@ try {
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Customer Address']//following-sibling::android.widget.EditText");
 			AppiumHelper.FindElementByXpath(driver,
+					"//android.widget.TextView[@text='Customer Address']//following-sibling::android.widget.EditText").clear();
+			AppiumHelper.FindElementByXpath(driver,
 					"//android.widget.TextView[@text='Customer Address']//following-sibling::android.widget.EditText")
 					.sendKeys(Customeraddress);
 
@@ -245,6 +247,8 @@ try {
 
 			helper.clickOnElementByXpath(driver,
 					"//android.widget.TextView[@text='Customer Address']//following-sibling::android.widget.EditText");
+			AppiumHelper.FindElementByXpath(driver,
+					"//android.widget.TextView[@text='Customer Address']//following-sibling::android.widget.EditText").clear();
 			AppiumHelper.FindElementByXpath(driver,
 					"//android.widget.TextView[@text='Customer Address']//following-sibling::android.widget.EditText")
 					.sendKeys(Customeraddress);
