@@ -4,6 +4,7 @@
 package mainTestcases;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.Test;
 
 import Pages.Documents;
@@ -64,12 +65,15 @@ public void basicDetails(String InspectiionType,String Newcardelaership,String S
 		basicDetails.Submit(driver);
 		
 		
-		if (AppiumHelper.FindElementById(driver, Documents.Documents).isDisplayed()) {
-			System.err.println("When Registration year is given lessthan the Manfacture year , basic details got submitted and allowed the user to next step");
-				
-		}else {
-			System.out.println("When Registration year is given lessthan the Manfacture year , not allowed the user to next step");
-		}
+		try {
+			if (AppiumHelper.FindElementById(driver, Documents.Documents).isDisplayed()) {
+				System.out.println("After submit the Basic Details, page is not redirected dashboard");
+					
+			}
+			}
+			catch(NoSuchElementException e) {
+				System.err.println("After submit the Basic Details, page is not redirected dashboard");
+			}
 
 	
 
